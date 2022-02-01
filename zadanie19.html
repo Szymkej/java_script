@@ -1,0 +1,54 @@
+<html>
+    <head>
+            <title> Przykład obliczenia V i Pc walca </title>
+
+<script language="JavaScript">
+    function pole_nie(r,h)
+    {
+    let r_liczba=parseFloat(r)
+    let h_liczba=parseFloat(h)
+    let pole = r_liczba * h_liczba;
+
+    document.getElementById("pokaz1").innerHTML = pole.toFixed(2) + "cm^2";
+    document.getElementsByName("pole")[0].value = pole.toFixed(2);
+
+
+    }
+    function obwod_jas(r,h)
+    {   
+
+        let a = parseFloat(r);
+        let b = parseFloat(h);
+
+        let obwod = (a*2)+(b*2);
+        document.getElementById("pokaz2").innerHTML = obwod.toFixed(2) + "cm";
+        
+        document.getElementsByName("obwod")[0].value = obwod.toFixed(2);
+    }
+    </script>
+    </head>
+    <body>
+    Pobliczanie pole i obwód walca
+    <br> <br>
+    <form name="formularz" action="..." onsubmit="pole_jas(this.a.value,this.b.value);
+    obwod_jas(this.a.value,this.b.value);return false">
+    Podaj a=
+    <input size="6" name="a">
+    Podaj b=
+    <input size="6" name="b">
+    <br>
+    <br>
+    <input TYPE="submit" Value="oblicz" >
+    <br>
+    <br>
+    pole=
+    <input size="6" name="pole">
+    obwod=
+    <input size="6" name="obwod">
+    </form>
+    <table>
+    <tr id="pokaz1"></tr>
+    <tr id="pokaz2"></tr>
+    </table>
+    </body>
+    </html>
